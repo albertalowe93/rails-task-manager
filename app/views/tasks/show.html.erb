@@ -1,0 +1,20 @@
+<h1><%= @task.title %></h1>
+<div class="alert alert-dark mx-5" role="alert">
+  <div class="d-flex justify-content-between">
+    <p class="alert-heading">Tasks details:</p>
+    <button type="button" class="btn btn-outline-secondary"><%= link_to "Edit this task", task_edit_path  %></button>
+  </div>
+  <h4><%= @task.details %></h4>
+  <hr>
+  <% if @task.completed %>
+  <p class="checkbox checked"></p>
+  <p class="mb-0">This task is completed</p>
+  <% else %>
+  <p class="checkbox"></p>
+  <p class="mb-0">This task is not completed yet</p>
+  <% end %>
+
+</div>
+<%= link_to "Back to Tasks List", tasks_path  %>
+
+
